@@ -1,0 +1,66 @@
+body {
+background-color: black;
+color: white;
+font-family: arial;
+}
+#navbar {
+position: fixed;
+top: 0vh;
+left: 0px;
+width: 100%;
+height: 2.2vw;
+font-size: 2vw;
+text-align: center;
+z-index: 1;
+background-color: black;
+display: block;
+}
+#mainarea {
+position: relative;
+top: 5vw;
+}
+#heroimage {
+width: 20vw;
+height: 11vw;
+object-fit: cover;
+}
+table {
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+width: 45w;
+left: 37.5vw;
+}
+#herocell {
+
+}
+#smallcell {
+width: 5vw;
+font-size: 5vw;
+}
+#switcher {
+font-size: 1vw;
+left: 45.9vw;
+position: absolute;
+top: -2vw;
+}
+#movies-active {
+display: inline;
+color: white;
+}
+#shows-active {
+display: inline;
+color: white;
+}
+#movies-inactive {
+display: inline;
+color: gray;
+}
+#shows-inactive {
+display: inline;
+color: gray;
+}
+a {
+text-decoration: none;
+color: inherit;
+}

@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="style.css">
+<html>
+<body>
+<div id="navbar">PLEX</div>
+<div id="mainarea">
+
+<div id="switcher">
+<div id="movies-active"><a href="javascript:showMovies()">Movies</a></div>
+<div id="shows-inactive"><a href="javascript:showShows()">Shows</a></div>
+</div>
+
+<table>
+<tr>
+
+<td id="smallcell">1</td>
+<td id="herocell"><a href="https://www.imdb.com/title/tt3385516/" target="_blank"><img id="heroimage" src="https://images-2.rakuten.tv/storage/snapshot/shot/8bb78faf-d4ab-4292-89c2-ec5e9a2d7c54-snapshot-1590665384-width936-quality90.jpeg" /></a></td>
+
+</tr>
+
+<tr>
+
+<td id="smallcell">2</td>
+<td id="herocell"><a href="https://www.imdb.com/title/tt21064584/" target="_blank"><img id="heroimage" src="https://media.gq.com/photos/658eeb67afb6a501bfd64559/16:9/w_2560%2Cc_limit/IC_33640.jpg" /></a></td>
+
+</tr>
+
+<tr>
+
+<td id="smallcell">3</td>
+<td id="herocell"><a href="https://www.imdb.com/title/tt4682266/" target="_blank"><img id="heroimage" src="https://media.vanityfair.com/photos/5f4d0d7b0ca7fe28f9ec3ec1/the-new-mutants-DF-08626_R3_rgb.jpg" /></a></td>
+
+</tr>
+
+</table>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+function clearTable() {
+document.body.getElementsByTagName("table")[0].innerHTML = ""
+}
+
+function addMovie(rank, url, img) {
+document.body.getElementsByTagName("table")[0].innerHTML = document.body.getElementsByTagName("table")[0].innerHTML + '<tr><td id="smallcell">' + rank + '</td><td id="herocell"><a href="' + url + '" target="_blank"><img id="heroimage" src="' + img + '" /></a></td></tr>'
+}
+function showMovies() {
+clearTable()
+addMovie("1", "https://www.imdb.com/title/tt3385516/", "https://images-2.rakuten.tv/storage/snapshot/shot/8bb78faf-d4ab-4292-89c2-ec5e9a2d7c54-snapshot-1590665384-width936-quality90.jpeg");
+addMovie("2", "https://www.imdb.com/title/tt21064584/", "https://media.gq.com/photos/658eeb67afb6a501bfd64559/16:9/w_2560%2Cc_limit/IC_33640.jpg");
+addMovie("3", "https://www.imdb.com/title/tt4682266/", "https://media.vanityfair.com/photos/5f4d0d7b0ca7fe28f9ec3ec1/the-new-mutants-DF-08626_R3_rgb.jpg");
+try {
+document.getElementById("movies-inactive").id = "movies-active";
+}
+catch {
+}
+try {
+document.getElementById("shows-active").id = "shows-inactive";
+}
+catch {
+}
+}
+
+function showShows() {
+clearTable()
+addMovie("1", "https://www.imdb.com/title/tt0098800/", "https://cdn.abcotvs.com/dip/images/977594_091015-cc-Fresh-Prince-Thumb.jpg");
+addMovie("2", "https://www.imdb.com/title/tt1942683/", "https://sportshub.cbsistatic.com/i/2024/06/16/79a36f05-dbbf-4efb-8269-19ec74d25e34/the-amazing-world-of-gumball-season-7.jpg");
+addMovie("3", "https://www.imdb.com/title/tt0149460/", "https://www.hollywoodreporter.com/wp-content/uploads/2022/02/TCDFUTU_FE007-H2-2022.jpg");
+try {
+document.getElementById("movies-active").id = "movies-inactive";
+}
+catch {
+}
+try {
+document.getElementById("shows-inactive").id = "shows-active";
+}
+catch {
+}
+}
+clearTable()
+showMovies()
+</script>
